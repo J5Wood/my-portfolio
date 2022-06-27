@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*** NAV */
+
+#nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100px;
+}
+
+#name-header {
+  flex-grow: 1;
+  white-space: nowrap;
+  font-family: STFangsong, rockwell;
+  font-size: 270%;
+  padding-right: 20px;
+}
+
+#nav-spacer {
+  flex-grow: 4;
+}
+
+.nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.nav-links button {
+  height: 45px;
+  padding: 10px 10px;
+  background-color: white;
+  border: 3px ridge grey;
+  white-space: nowrap;
+}
+
+/*** Title  */
+
+#title {
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-image {
+  position: relative;
+  top: -25px;
+  width: min(66%, 475px);
+}
+
+/*** About Me  */
+
+#about-me {
+  height: 450px;
+  background-color: grey;
+}
