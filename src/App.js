@@ -5,6 +5,7 @@ import Title from "./Title";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <AboutMe />
       <Projects />
       <Contact />
+      <Footer />
     </>
   );
 };
