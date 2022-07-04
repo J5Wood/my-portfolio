@@ -97,7 +97,7 @@ body {
 /*** Projects */
 
 #projects {
-  height: 950px;
+  height: min-content;
   background-color: white;
   display: flex;
   flex-flow: column nowrap;
@@ -112,24 +112,79 @@ body {
   text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(153, 153, 153);
 }
 
-#project-container {
+/* #project-container {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   gap: 25vw;
   width: 100%;
-  overflow-x: hidden;
+} */
+
+/* // Carousel configuration parameters
+$item-width: 40%; // Now we can use percentages!
+$item-separation: 0px; // This now is set with Js
+$viewer-distance: 500px; */
+
+.carousel {
+  padding: 0px;
+
+  perspective: 500px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel figure {
+  margin: 0;
+
+  width: 40%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  flex: 0 0 auto;
 }
 
 .project {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0px / 2;
+}
+
+.project:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.carousel nav {
   display: flex;
-  flex-flow: column nowrap;
   justify-content: center;
+  margin: 20px 0 0;
+}
+
+.carousel nav button {
+  flex: 0 0 auto;
+  margin: 0 5px;
+
+  cursor: pointer;
+
+  color: #333;
+  background: none;
+  border: 1px solid;
+  letter-spacing: 1px;
+  padding: 0px 10px;
+}
+
+.project {
+  /* display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; */
   border: 2px solid black;
-  width: 300px;
+  /* width: 300px; */
   font-size: medium;
-  box-shadow: 2px 2px 3px grey, 2px -2px 3px grey, -2px -2px 3px grey,
-    -2px 2px 3px grey;
+  /* box-shadow: 2px 2px 3px grey, 2px -2px 3px grey, -2px -2px 3px grey,
+    -2px 2px 3px grey; */
 }
 
 .project h3 {
@@ -137,10 +192,10 @@ body {
   margin: 0;
   padding-bottom: 20px;
 }
-
+/* 
 .project-image {
   align-self: center;
-}
+} */
 
 .link-button {
   text-decoration: none;
@@ -157,7 +212,7 @@ body {
 
 #contact {
   overflow-y: hidden;
-  height: 450px;
+  height: min-content;
   background: linear-gradient(
     162deg,
     rgb(60, 60, 75) -10%,
@@ -165,7 +220,7 @@ body {
     rgb(70, 70, 85) 100%
   );
   color: rgb(244, 240, 240);
-  padding: min(10px, 10%) 50px 0 50px;
+  padding: 50px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;

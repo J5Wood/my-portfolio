@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Carousel from "./Carousel";
 
 const App = () => {
   return (
