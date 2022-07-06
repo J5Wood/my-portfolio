@@ -15,13 +15,10 @@ const Projects = () => {
   return (
     <section id="projects">
       <h2>Projects</h2>
-      {/* <div id="project-container"> */}
-      <div className="carousel" data-gap="80">
+      <div className="carousel" data-gap="0">
+        <button className="select prev">Prev</button>
         <figure>{displayProjects()}</figure>
-        <nav>
-          <button className="nav prev">Prev</button>
-          <button className="nav next">Next</button>
-        </nav>
+        <button className="select next">Next</button>
       </div>
     </section>
   );

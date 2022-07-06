@@ -103,72 +103,69 @@ body {
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: center;
+  padding: 70px 0 50px 0;
 }
 
 #projects h2 {
   margin: 0;
-  padding-top: 100px;
   color: black;
   text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(153, 153, 153);
 }
 
-/* #project-container {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  gap: 25vw;
-  width: 100%;
-} */
-
-/* // Carousel configuration parameters
-$item-width: 40%; // Now we can use percentages!
-$item-separation: 0px; // This now is set with Js
-$viewer-distance: 500px; */
-
 .carousel {
-  padding: 0px;
-
+  padding: 20px;
   perspective: 500px;
   overflow: hidden;
-
   display: flex;
-  flex-direction: column;
+  flex-flow: row;
   align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .carousel figure {
-  margin: 0;
-
-  width: 40%;
+  width: clamp(300px, 70%, 900px);
   transform-style: preserve-3d;
   transition: transform 0.5s;
   flex: 0 0 auto;
 }
 
-.project {
+.project-spacer {
+  max-height: 100%;
   width: 100%;
   box-sizing: border-box;
   padding: 0 0px / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.project:not(:first-of-type) {
+.project-spacer:not(:first-of-type) {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-.carousel nav {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 0;
+.project {
+  padding: 15px;
+  border: 2px solid rgb(0, 0, 0);
+  font-size: medium;
+  width: 60%;
+  background: radial-gradient(
+    circle at center,
+    rgb(255, 255, 255) 70%,
+    rgba(229, 229, 229, 0.8) 95%
+  );
 }
 
-.carousel nav button {
+.project-image {
+  max-width: 100%;
+}
+
+.select {
   flex: 0 0 auto;
   margin: 0 5px;
-
   cursor: pointer;
-
   color: #333;
   background: none;
   border: 1px solid;
@@ -176,26 +173,11 @@ $viewer-distance: 500px; */
   padding: 0px 10px;
 }
 
-.project {
-  /* display: flex;
-  flex-flow: column nowrap;
-  justify-content: center; */
-  border: 2px solid black;
-  /* width: 300px; */
-  font-size: medium;
-  /* box-shadow: 2px 2px 3px grey, 2px -2px 3px grey, -2px -2px 3px grey,
-    -2px 2px 3px grey; */
-}
-
 .project h3 {
   font-size: larger;
   margin: 0;
   padding-bottom: 20px;
 }
-/* 
-.project-image {
-  align-self: center;
-} */
 
 .link-button {
   text-decoration: none;

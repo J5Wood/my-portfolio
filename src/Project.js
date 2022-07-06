@@ -9,21 +9,23 @@ const Project = (props) => {
   };
 
   return (
-    <div className={"project " + position}>
-      <h3>{name}</h3>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <img className="project-image" src={imgSrc} alt={imgAlt} />
-      </a>
-      <p>{description}</p>
-      <ul>{renderList(features)}</ul>
-      <a
-        href={link}
-        target="_blank"
-        className="link-button"
-        rel="noopener noreferrer"
-      >
-        View Repository
-      </a>
+    <div className="project-spacer">
+      <div className={"project " + position}>
+        <h3>{name}</h3>
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img className="project-image" src={imgSrc} alt={imgAlt} />
+        </a>
+        <p>{description}</p>
+        <ul>{renderList(features)}</ul>
+        <a
+          href={link}
+          target="_blank"
+          className="link-button"
+          rel="noopener noreferrer"
+        >
+          View Repository
+        </a>
+      </div>
     </div>
   );
 };

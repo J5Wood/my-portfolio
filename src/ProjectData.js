@@ -4,18 +4,6 @@ import coffeeTalkPhoto from "./assets/coffee-talk-photo.png";
 
 const projectData = [
   {
-    name: "Coffee Talk",
-    imgSrc: coffeeTalkPhoto,
-    imgAlt: "Preview of Coffee Talk app",
-    description: "Coffee Talk is a coffee bean and brand review website",
-    features: [
-      "Fully built Ruby on Rails, MVC application",
-      "Implemented user signup and login with Oauth and Github, and also basic username and password",
-      "Follows RESTful conventions for all resources, including nested routes.",
-    ],
-    link: "https://github.com/J5Wood/coffee-talk",
-  },
-  {
     name: "Pic-Sure",
     imgSrc: picSurePhoto,
     imgAlt: "Preview of Pic-Sure app",
@@ -39,6 +27,18 @@ const projectData = [
       "Incorporates resource filtering by city and restaurant style",
     ],
     link: "https://github.com/J5Wood/Flavor-Town",
+  },
+  {
+    name: "Coffee Talk",
+    imgSrc: coffeeTalkPhoto,
+    imgAlt: "Preview of Coffee Talk app",
+    description: "Coffee Talk is a coffee bean and brand review website",
+    features: [
+      "Fully built Ruby on Rails, MVC application",
+      "Implemented user signup and login with Oauth and Github, and also basic username and password",
+      "Follows RESTful conventions for all resources, including nested routes.",
+    ],
+    link: "https://github.com/J5Wood/coffee-talk",
   },
 ];
 
