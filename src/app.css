@@ -97,11 +97,10 @@ body {
 /*** Projects */
 
 #projects {
-  height: min-content;
   background-color: white;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   padding: 70px 0 50px 0;
 }
@@ -119,15 +118,17 @@ body {
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-between;
+  max-width: 100%;
 }
 
 .carousel figure {
+  margin: 10% 0;
   width: clamp(300px, 70%, 900px);
   transform-style: preserve-3d;
   transition: transform 0.5s;
   flex: 0 0 auto;
+  z-index: 12;
 }
 
 .project-spacer {
@@ -156,6 +157,7 @@ body {
     rgb(255, 255, 255) 70%,
     rgba(229, 229, 229, 0.8) 95%
   );
+  border-radius: 15px;
 }
 
 .project-image {
@@ -232,6 +234,7 @@ body {
 .button button {
   background: none;
   border: none;
+  width: 200px;
 }
 
 .button button:hover {

@@ -18,6 +18,8 @@ const Projects = () => {
       <div className="carousel" data-gap="0">
         <button className="select prev">Prev</button>
         <figure>{displayProjects()}</figure>
+
+        {/* <div className="project-spacer"></div> */}
         <button className="select next">Next</button>
       </div>
     </section>
