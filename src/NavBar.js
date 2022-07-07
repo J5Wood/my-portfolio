@@ -30,6 +30,7 @@ const NavBar = () => {
       <span id="nav-spacer"></span>
       <span className="nav-links">
         <button
+          className="nav-button"
           onMouseOver={handleMouseOver}
           onMouseDown={handlePressedButton}
           onMouseUp={unPressButton}
@@ -40,6 +41,7 @@ const NavBar = () => {
           About Me
         </button>
         <button
+          className="nav-button"
           onMouseOver={handleMouseOver}
           onMouseDown={handlePressedButton}
           onMouseUp={unPressButton}
@@ -50,6 +52,7 @@ const NavBar = () => {
           Projects
         </button>
         <button
+          className="nav-button"
           onMouseOver={handleMouseOver}
           onMouseDown={handlePressedButton}
           onMouseUp={unPressButton}
@@ -60,6 +63,7 @@ const NavBar = () => {
           Contact Me
         </button>
         <a
+          className="nav-button"
           href={resume}
           target="_blank"
           onMouseOver={handleMouseOver}
