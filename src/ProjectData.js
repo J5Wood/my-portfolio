@@ -23,7 +23,7 @@ const projectData = [
       "Flavor Town is a website for documenting your bucket-list restaurants",
     features: [
       "Built with vanilla JavaScript on the frontend and a Rails API backend",
-      "Employs Object Oriented JavaScript(OOJS)",
+      "Employs Object Oriented JavaScript (OOJS)",
       "Incorporates resource filtering by city and restaurant style",
     ],
     link: "https://github.com/J5Wood/Flavor-Town",

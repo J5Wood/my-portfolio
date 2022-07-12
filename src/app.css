@@ -60,7 +60,7 @@ body {
   align-items: center;
   color: black;
   text-decoration: none;
-  height: 45px;
+  min-height: 45px;
   background-color: white;
   white-space: nowrap;
   cursor: pointer;
@@ -139,37 +139,37 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 70px 0 50px 0;
+  max-width: 100%;
 }
 
 #projects h2 {
   margin: 0;
+  justify-self: flex-start;
   color: black;
   text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(153, 153, 153);
 }
 
 .carousel {
-  padding: 20px;
   perspective: 500px;
-  overflow: hidden;
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-between;
-  max-width: 100%;
+  justify-content: center;
+  padding: 0 1em;
 }
 
 .carousel figure {
-  margin: 10% 0;
-  width: clamp(300px, 70%, 900px);
+  min-height: fit-content;
+  margin: 15% 0;
   transform-style: preserve-3d;
   transition: transform 0.5s;
-  flex: 0 0 auto;
-  z-index: 12;
+  flex: 0 1 auto;
+  z-index: 1;
 }
 
 .project-spacer {
   max-height: 100%;
-  width: 100%;
+  min-width: 100%;
   padding: 0 0px / 2;
   display: flex;
   justify-content: center;
@@ -180,15 +180,14 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
 }
 
 .project {
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 15px;
+  padding: 15px 1em;
   border: 2px solid rgb(0, 0, 0);
   font-size: medium;
-  width: 60%;
+  width: min(90%, 600px);
   background: radial-gradient(
     circle at center,
     rgb(255, 255, 255) 70%,
@@ -197,19 +196,24 @@ body {
   border-radius: 15px;
 }
 
+.project ul {
+  padding: 1em;
+}
+
 .project-image {
   max-width: 100%;
 }
 
 .select {
   flex: 0 0 auto;
-  margin: 0 5px;
   cursor: pointer;
   color: #333;
   background: none;
   border: 1px solid;
   letter-spacing: 1px;
-  padding: 0px 10px;
+  padding: 10px;
+  z-index: 2;
+  background-color: white;
 }
 
 .project h3 {
@@ -255,7 +259,6 @@ body {
 #contact-buttons {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
   width: 100%;
 }
 
@@ -272,6 +275,7 @@ body {
   background: none;
   border: none;
   width: 200px;
+  overflow: visible;
 }
 
 .button button:hover {
