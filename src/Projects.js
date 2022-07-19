@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import projectData from "./ProjectData";
 import Project from "./Project";
+import {
+  handleMouseOver,
+  handlePressedButton,
+  unPressButton,
+} from "./ButtonHelper";
+import { constructCarousel } from "./Carousel";
 
 const Projects = () => {
   const positions = ["previous", "current", "next"];
@@ -12,15 +18,36 @@ const Projects = () => {
     });
   };
 
+  useEffect(() => {
+    let carousel = document.querySelector(".carousel");
+    if (carousel) {
+      constructCarousel(carousel);
+    }
+  });
+
   return (
     <section id="projects">
       <h2>Projects</h2>
       <div className="carousel" data-gap="0">
-        <button className="select prev">Prev</button>
+        <button
+          className="select prev"
+          onMouseOver={handleMouseOver}
+          onMouseDown={handlePressedButton}
+          onMouseUp={unPressButton}
+          onMouseLeave={unPressButton}
+        >
+          Prev
+        </button>
         <figure>{displayProjects()}</figure>
-
-        {/* <div className="project-spacer"></div> */}
-        <button className="select next">Next</button>
+        <button
+          className="select next"
+          onMouseOver={handleMouseOver}
+          onMouseDown={handlePressedButton}
+          onMouseUp={unPressButton}
+          onMouseLeave={unPressButton}
+        >
+          Next
+        </button>
       </div>
     </section>
   );

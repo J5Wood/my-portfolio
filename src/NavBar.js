@@ -1,5 +1,10 @@
 import React from "react";
 import resume from "./assets/resume.pdf";
+import {
+  handleMouseOver,
+  handlePressedButton,
+  unPressButton,
+} from "./ButtonHelper";
 
 const NavBar = () => {
   const navigateToSection = (event, correction = 0) => {
@@ -8,20 +13,6 @@ const NavBar = () => {
       0,
       document.getElementById(container).offsetTop + correction
     );
-  };
-
-  const handleMouseOver = (e) => {
-    e.target.classList.add("highlight");
-  };
-
-  const handlePressedButton = (e) => {
-    e.target.classList.remove("highlight");
-    e.target.classList.add("select-button");
-  };
-
-  const unPressButton = (e) => {
-    e.target.classList.remove("select-button");
-    e.target.classList.remove("highlight");
   };
 
   return (
