@@ -6,29 +6,32 @@ import {
   handlePressedButton,
   unPressButton,
 } from "./ButtonHelper";
-import { constructCarousel } from "./Carousel";
+// import { constructCarousel } from "./Carousel";
 
 const Projects = () => {
-  const positions = ["previous", "current", "next"];
+  // const positions = ["previous", "current", "next"];
 
   const displayProjects = () => {
     return projectData.map((project, i) => {
-      project["position"] = positions[i];
+      // project["position"] = positions[i];
       return <Project data={project} key={project.name} />;
     });
   };
 
-  useEffect(() => {
-    let carousel = document.querySelector(".carousel");
-    if (carousel) {
-      constructCarousel(carousel);
-    }
-  });
+  // useEffect(() => {
+  //   let carousel = document.querySelector(".carousel");
+  //   if (carousel) {
+  //     constructCarousel(carousel);
+  //   }
+  // });
 
   return (
     <section id="projects">
       <h2>Projects</h2>
-      <div className="carousel" data-gap="0">
+      {console.log(projectData)}
+      <div className="project-container">{displayProjects()}</div>
+
+      {/* <div className="carousel" data-gap="0">
         <button
           className="select prev"
           onMouseOver={handleMouseOver}
@@ -48,7 +51,7 @@ const Projects = () => {
         >
           Next
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };

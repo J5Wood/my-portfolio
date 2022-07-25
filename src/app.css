@@ -113,12 +113,14 @@ body {
 
 #about-me {
   min-height: 450px;
+
   background: linear-gradient(
     162deg,
     rgb(60, 60, 75) -10%,
     rgb(25, 25, 25) 25%,
     rgb(70, 70, 85) 100%
   );
+  border-radius: 20px;
   color: rgb(244, 240, 240);
   display: flex;
   flex-flow: column nowrap;
@@ -135,76 +137,36 @@ body {
 /*** Projects */
 
 #projects {
-  background-color: white;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   padding: 70px 0 50px 0;
-  max-width: 100%;
+  width: 100%;
 }
 
 #projects h2 {
   margin: 0;
+  padding-bottom: 1.5em;
   justify-self: flex-start;
   color: black;
   text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(153, 153, 153);
 }
 
-.carousel {
-  perspective: 500px;
-  /* -webkit-perspective: 500px; */
+.project-container {
+  max-width: 100%;
   display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1em;
-}
-
-.carousel figure {
-  min-height: fit-content;
-  margin: 15% 0;
-  transform-style: preserve-3d;
-  /* -webkit-transform-style: preserve-3d; */
-  /* -webkit-transition: transform 0.5s; */
-  /* -webkit-backface-visibility: hidden; */
-  transition: transform 0.5s;
-  flex: 0 1 auto;
-  z-index: 1;
-}
-
-/* @supports (-webkit-transition: transform 0.5s) {
-  .carousel {
-    -webkit-perspective: 500px;
-  }
-  .carousel figure {
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: transform 0.5s;
-    -webkit-backface-visibility: hidden;
-  }
-} */
-
-.project-spacer {
-  max-height: 100%;
-  min-width: 100%;
-  padding: 0 0px / 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.project-spacer:not(:first-of-type) {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 1em;
 }
 
 .project {
-  padding: 15px 1em;
+  /* flex: 0 0 auto; */
+  padding: 10px 1em;
   border: 2px solid rgb(0, 0, 0);
   font-size: medium;
-  width: min(90%, 600px);
+  width: max(30%, 190px);
   background: radial-gradient(
     circle at center,
     rgb(255, 255, 255) 70%,
@@ -221,7 +183,7 @@ body {
   max-width: 100%;
 }
 
-.select {
+/* .select {
   border: 2px ridge grey;
   border-radius: 3px;
   padding: 10px 10px;
@@ -235,8 +197,7 @@ body {
   white-space: nowrap;
   cursor: pointer;
   transition: border 125ms, transform 125ms, text-shadow 125ms;
-  /* z-index: 123; */
-}
+} */
 
 .project h3 {
   font-size: larger;
