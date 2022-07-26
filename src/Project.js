@@ -1,30 +1,46 @@
 import React from "react";
 
 const Project = (props) => {
-  const { name, imgSrc, imgAlt, description, features, link, position } =
-    props.data;
+  const { name, imgSrc, imgAlt, description, features, link } = props.data;
+  const id = props.projectId;
 
   const renderList = (features) => {
     return features.map((feature, i) => <li key={i}>{feature}</li>);
   };
 
   return (
-    <div className={"project"}>
-      <h3>{name}</h3>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <img className="project-image" src={imgSrc} alt={imgAlt} />
-      </a>
-      <p>{description}</p>
-      <ul>{renderList(features)}</ul>
-      <a
-        href={link}
-        target="_blank"
-        className="link-button"
-        rel="noopener noreferrer"
-      >
-        View Repository
-      </a>
-    </div>
+    <>
+      <div className="project-background" data-id={id}>
+        <div data-id={id} className={"project"}>
+          <h3 data-id={id}>{name}</h3>
+          <a
+            data-id={id}
+            className="inactiveLink"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              data-id={id}
+              className="project-image"
+              src={imgSrc}
+              alt={imgAlt}
+            />
+          </a>
+          <p data-id={id}>{description}</p>
+          <ul data-id={id}>{renderList(features)}</ul>
+          <a
+            data-id={id}
+            href={link}
+            target="_blank"
+            className="link-button"
+            rel="noopener noreferrer"
+          >
+            View Repository
+          </a>
+        </div>
+      </div>
+    </>
   );
 };
 

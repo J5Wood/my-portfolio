@@ -157,24 +157,52 @@ body {
   max-width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  position: relative;
+}
+
+.project-background {
+  background-color: rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 18px;
+  display: flex;
+  width: min(26%, 250px);
+  height: min(26vw, 250px);
+  transition: ease-in opacity 0.4s, height 0.4s, width 0.4s;
+  opacity: 0.3;
+}
+
+.project-background:hover {
+  width: 27%;
+  height: 27vw;
+  opacity: 1;
 }
 
 .project {
-  /* flex: 0 0 auto; */
   padding: 10px 1em;
-  border: 2px solid rgb(0, 0, 0);
   font-size: medium;
-  width: max(30%, 190px);
+  width: 100%;
+  height: 100%;
   background: radial-gradient(
     circle at center,
     rgb(255, 255, 255) 70%,
     rgba(229, 229, 229, 0.8) 95%
   );
+  opacity: 0.5;
   border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
+.project:hover {
+  opacity: 1;
+}
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}
 .project ul {
   padding: 1em;
 }
@@ -183,24 +211,8 @@ body {
   max-width: 100%;
 }
 
-/* .select {
-  border: 2px ridge grey;
-  border-radius: 3px;
-  padding: 10px 10px;
-  font-size: small;
-  display: flex;
-  align-items: center;
-  color: black;
-  text-decoration: none;
-  min-height: 45px;
-  background-color: white;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: border 125ms, transform 125ms, text-shadow 125ms;
-} */
-
 .project h3 {
-  font-size: larger;
+  font-size: 1.2em;
   margin: 0;
   padding-bottom: 20px;
 }
@@ -214,6 +226,74 @@ body {
   color: white;
   font-weight: 700;
   box-shadow: 2px 2px 3px grey;
+}
+
+.large-project-display {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: 0.25s linear fadein;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.large-project-display > .project-background,
+.large-project-display > .project-background:hover {
+  opacity: 1;
+  width: min(50%, 750px);
+  height: fit-content;
+}
+
+.large-project-display > .project-background > .project,
+.large-project-display > .project-background > .project:hover {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.button-spacer {
+  width: calc(min(50%, 750px) + 4em);
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+.button-spacer > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 1.75em;
+  font-weight: 500;
+  width: 1.2em;
+  height: 1.2em;
+  border: none;
+  position: relative;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 2px 3px 24px 2px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 2px 3px 24px 2px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 2px 3px 24px 2px rgba(0, 0, 0, 0.63);
+  transition: transform 0.3s, width 0.3s, height 0.3s, border 0.3s;
+}
+
+.button-spacer > button:hover {
+  border: 3px solid rgb(255, 255, 255);
+  transform: translateY(-2px) translateX(-2px);
+  width: 1.3em;
+  height: 1.3em;
 }
 
 /*** Contact */

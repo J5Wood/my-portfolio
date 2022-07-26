@@ -7,7 +7,7 @@ const projectData = [
     name: "Pic-Sure",
     imgSrc: picSurePhoto,
     imgAlt: "Preview of Pic-Sure app",
-    description: "Pic-Sure is a website for sharing images",
+    description: "Pic-Sure is an app for sharing images",
     features: [
       "Built with a React/Redux frontend and a Rails API backend",
       "Uses JSON Web Tokens (JWT) for user login authentication",

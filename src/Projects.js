@@ -1,57 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import projectData from "./ProjectData";
 import Project from "./Project";
-import {
-  handleMouseOver,
-  handlePressedButton,
-  unPressButton,
-} from "./ButtonHelper";
-// import { constructCarousel } from "./Carousel";
 
 const Projects = () => {
-  // const positions = ["previous", "current", "next"];
+  const [largeDisplay, setLargeDisplay] = useState(null);
+  window.addEventListener("click", (e) => enlargeContainer(e));
 
   const displayProjects = () => {
     return projectData.map((project, i) => {
-      // project["position"] = positions[i];
-      return <Project data={project} key={project.name} />;
+      return <Project data={project} key={project.name} projectId={i} />;
     });
   };
 
-  // useEffect(() => {
-  //   let carousel = document.querySelector(".carousel");
-  //   if (carousel) {
-  //     constructCarousel(carousel);
-  //   }
-  // });
+  const enlargeContainer = (e) => {
+    const id = e.target.dataset.id;
+    if (id || id === 0) {
+      setLargeDisplay(id);
+    } else {
+      setLargeDisplay(null);
+    }
+  };
+
+  const displayEnlargedProject = () => {
+    const project = projectData[largeDisplay];
+    if (project) {
+      return (
+        <div className="large-project-display">
+          <span className="button-spacer">
+            <button onClick={(e) => enlargeContainer(e)}>X</button>
+          </span>
+
+          <Project data={project} key={project.name} projectId={largeDisplay} />
+        </div>
+      );
+    }
+  };
 
   return (
     <section id="projects">
       <h2>Projects</h2>
-      {console.log(projectData)}
-      <div className="project-container">{displayProjects()}</div>
-
-      {/* <div className="carousel" data-gap="0">
-        <button
-          className="select prev"
-          onMouseOver={handleMouseOver}
-          onMouseDown={handlePressedButton}
-          onMouseUp={unPressButton}
-          onMouseLeave={unPressButton}
-        >
-          Prev
-        </button>
-        <figure>{displayProjects()}</figure>
-        <button
-          className="select next"
-          onMouseOver={handleMouseOver}
-          onMouseDown={handlePressedButton}
-          onMouseUp={unPressButton}
-          onMouseLeave={unPressButton}
-        >
-          Next
-        </button>
-      </div> */}
+      <div className="project-container" onClick={(e) => enlargeContainer(e)}>
+        {displayProjects()}
+        {displayEnlargedProject()}
+      </div>
     </section>
   );
 };
