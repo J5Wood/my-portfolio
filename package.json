@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "My Portfolio",
   "main": "src/index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "webpack-dev-server .",
     "start": "node server.js",
