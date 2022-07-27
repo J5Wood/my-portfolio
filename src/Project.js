@@ -4,13 +4,27 @@ const Project = (props) => {
   const { name, imgSrc, imgAlt, description, features, link } = props.data;
   const id = props.projectId;
 
+  const root = document.documentElement;
+
+  const changeRandomColor = () => {
+    const randomColorValue = () => Math.floor(Math.random() * 256);
+    root.style.setProperty(
+      "--random-color",
+      `rgba(${randomColorValue()},${randomColorValue()}, ${randomColorValue()}, 0.7)`
+    );
+  };
+
   const renderList = (features) => {
     return features.map((feature, i) => <li key={i}>{feature}</li>);
   };
 
   return (
     <>
-      <div className="project-background" data-id={id}>
+      <div
+        className="project-background"
+        data-id={id}
+        onMouseEnter={() => changeRandomColor()}
+      >
         <div data-id={id} className={"project"}>
           <h3 data-id={id}>{name}</h3>
           <a

@@ -1,3 +1,7 @@
+:root {
+  --random-color: rgba(233, 38, 38, 0.5);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -155,6 +159,7 @@ body {
 
 .project-container {
   max-width: 100%;
+  height: min(30vw, 360px);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -164,20 +169,51 @@ body {
 }
 
 .project-background {
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
   border: 3px solid rgb(0, 0, 0);
   border-radius: 18px;
   display: flex;
-  width: min(26%, 250px);
-  height: min(26vw, 250px);
-  transition: ease-in opacity 0.4s, height 0.4s, width 0.4s;
+  width: min(25%, 230px);
+  height: min(25vw, 230px);
+  transition: ease-in opacity 0.4s, height 0.4s, width 0.4s, transform 1s,
+    border 0.5s;
   opacity: 0.3;
+  z-index: 1;
 }
 
 .project-background:hover {
-  width: 27%;
-  height: 27vw;
+  width: min(31%, 360px);
+  height: min(31vw, 360px);
   opacity: 1;
+  position: relative;
+  border: 3px solid var(--random-color);
+  z-index: 1;
+}
+
+.project-background:hover::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  opacity: 0.5;
+  background-color: var(--random-color);
+  z-index: -1;
+  animation: 0.4s linear forwards rotate;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+    z-index: -1;
+  }
+
+  to {
+    transform: rotate(-6deg);
+    z-index: -1;
+  }
 }
 
 .project {
@@ -236,6 +272,7 @@ body {
   align-items: center;
   flex-direction: column;
   animation: 0.25s linear fadein;
+  z-index: 1;
 }
 
 @keyframes fadein {
@@ -253,6 +290,11 @@ body {
   opacity: 1;
   width: min(50%, 750px);
   height: fit-content;
+  border: 3px solid var(--random-color);
+}
+
+.large-project-display > .project-background:hover::before {
+  animation: none;
 }
 
 .large-project-display > .project-background > .project,
