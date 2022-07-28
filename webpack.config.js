@@ -18,16 +18,16 @@ module.exports = {
     /** "path"
      * the folder path of the output file
      */
-    path: path.resolve(__dirname, "build"),
-    publicPath: "/",
+    path: path.resolve(__dirname, "/"),
+    // publicPath: "/",
     /** "filename"
      * the name of the output file
      */
     filename: "main.js",
   },
-  devServer: {
-    contentBase: "./build",
-  },
+  // devServer: {
+  //   contentBase: "./build",
+  // },
   /** "target"
    * setting "node" as target app (server side), and setting it as "web" is
    * for browser (client side). Default is "web"
