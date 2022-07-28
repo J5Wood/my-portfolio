@@ -13,21 +13,17 @@ module.exports = {
   /** "entry"
    * the entry point
    */
-  entry: "./src/index.js",
+  entry: "./index.js",
   output: {
     /** "path"
      * the folder path of the output file
      */
-    path: path.resolve(__dirname, "/"),
-    // publicPath: "/",
+    path: path.resolve(__dirname, "public"),
     /** "filename"
      * the name of the output file
      */
     filename: "main.js",
   },
-  // devServer: {
-  //   contentBase: "./build",
-  // },
   /** "target"
    * setting "node" as target app (server side), and setting it as "web" is
    * for browser (client side). Default is "web"
