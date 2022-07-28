@@ -13,7 +13,7 @@ module.exports = {
   /** "entry"
    * the entry point
    */
-  entry: "./src/index.js",
+  entry: "/src/index.js",
   output: {
     /** "path"
      * the folder path of the output file
