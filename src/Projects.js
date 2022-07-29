@@ -8,7 +8,14 @@ const Projects = () => {
 
   const displayProjects = () => {
     return projectData.map((project, i) => {
-      return <Project data={project} key={project.name} projectId={i} />;
+      return (
+        <Project
+          data={project}
+          key={project.name}
+          projectId={i}
+          large={false}
+        />
+      );
     });
   };
 
@@ -26,11 +33,16 @@ const Projects = () => {
     if (project) {
       return (
         <div className="large-project-display">
-          <span className="button-spacer">
+          <span className="close-project-spacer">
             <button onClick={(e) => enlargeContainer(e)}>X</button>
           </span>
 
-          <Project data={project} key={project.name} projectId={largeDisplay} />
+          <Project
+            data={project}
+            key={project.name}
+            projectId={largeDisplay}
+            large={true}
+          />
         </div>
       );
     }

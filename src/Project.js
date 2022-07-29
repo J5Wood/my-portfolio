@@ -3,6 +3,7 @@ import React from "react";
 const Project = (props) => {
   const { name, imgSrc, imgAlt, description, features, link } = props.data;
   const id = props.projectId;
+  const inactiveLink = props.large ? "" : "inactiveLink";
 
   const root = document.documentElement;
 
@@ -15,7 +16,11 @@ const Project = (props) => {
   };
 
   const renderList = (features) => {
-    return features.map((feature, i) => <li key={i}>{feature}</li>);
+    return features.map((feature, i) => (
+      <li key={i} data-id={id}>
+        {feature}
+      </li>
+    ));
   };
 
   return (
@@ -29,7 +34,7 @@ const Project = (props) => {
           <h3 data-id={id}>{name}</h3>
           <a
             data-id={id}
-            className="inactiveLink"
+            className={inactiveLink}
             href={link}
             target="_blank"
             rel="noopener noreferrer"
