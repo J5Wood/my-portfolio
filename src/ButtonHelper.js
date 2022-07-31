@@ -4,10 +4,10 @@ export const handleMouseOver = (e) => {
 
 export const handlePressedButton = (e) => {
   e.target.classList.remove("highlight");
-  e.target.classList.add("select-button");
+  e.target.classList.add("held-button");
 };
 
 export const unPressButton = (e) => {
-  e.target.classList.remove("select-button");
+  e.target.classList.remove("held-button");
   e.target.classList.remove("highlight");
 };

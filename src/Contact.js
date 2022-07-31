@@ -13,9 +13,9 @@ const Contact = () => {
   return (
     <section id="contact">
       <h2>Contact Me</h2>
-      <div id="contact-buttons">
-        <div className="button-group">
-          <div className="button">
+      <div id="contact-links">
+        <div className="contact-group">
+          <div className="contact-link">
             <button>
               <img
                 src={linkedInLogo}
@@ -27,7 +27,7 @@ const Contact = () => {
             </button>
             <p>LinkedIn</p>
           </div>
-          <div className="button">
+          <div className="contact-link">
             <button>
               <img
                 src={gitHubLogo}
@@ -38,8 +38,8 @@ const Contact = () => {
             <p>GitHub</p>
           </div>
         </div>
-        <div className="button-group">
-          <div className="button">
+        <div className="contact-group">
+          <div className="contact-link">
             <button>
               <img
                 src={mediumLogo}
@@ -49,7 +49,7 @@ const Contact = () => {
             </button>
             <p>Medium</p>
           </div>
-          <div className="button">
+          <div className="contact-link">
             <button>
               <img
                 src={mailIcon}

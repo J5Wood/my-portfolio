@@ -68,7 +68,6 @@ body {
   min-height: 45px;
   background-color: white;
   white-space: nowrap;
-  cursor: pointer;
   transition: border 125ms, transform 125ms, text-shadow 125ms;
 }
 
@@ -83,7 +82,7 @@ body {
     -1px -1px 1px rgb(185, 185, 185);
 }
 
-.select-button {
+.held-button {
   border-radius: 3px;
   background: linear-gradient(
     36deg,
@@ -228,16 +227,17 @@ body {
   opacity: 0.5;
   border-radius: 15px;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .project:hover {
   opacity: 1;
 }
+
 .inactiveLink {
   pointer-events: none;
   cursor: default;
 }
+
 .project ul {
   padding: 1em;
 }
@@ -252,7 +252,7 @@ body {
   padding-bottom: 20px;
 }
 
-.link-button {
+.repository-link {
   text-decoration: none;
   border: 1px solid black;
   width: 50%;
@@ -303,10 +303,6 @@ body {
   height: 100%;
   overflow: visible;
 }
-
-/* .large-project-display .project a{
-  background-color: aqua;
-} */
 
 .close-project-spacer {
   width: calc(min(50%, 750px) + 4em);
@@ -364,13 +360,13 @@ body {
   text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 1em rgb(140, 140, 140);
 }
 
-#contact-buttons {
+#contact-links {
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 }
 
-.button-group {
+.contact-group {
   overflow-y: hidden;
   display: flex;
   flex-flow: row wrap;
@@ -379,14 +375,14 @@ body {
   padding: 20px 0;
 }
 
-.button button {
+.contact-link button {
   background: none;
   border: none;
   width: 200px;
   overflow: visible;
 }
 
-.button button:hover {
+.contact-link button:hover {
   cursor: pointer;
 }
 

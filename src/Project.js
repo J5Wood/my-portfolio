@@ -52,7 +52,7 @@ const Project = (props) => {
             data-id={id}
             href={link}
             target="_blank"
-            className="link-button"
+            className="repository-link"
             rel="noopener noreferrer"
           >
             View Repository
