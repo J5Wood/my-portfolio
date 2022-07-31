@@ -15,49 +15,45 @@ const Contact = () => {
       <h2>Contact Me</h2>
       <div id="contact-links">
         <div className="contact-group">
-          <div className="contact-link">
+          <div
+            className="contact-link"
+            onClick={() =>
+              openInNewTab("https://www.linkedin.com/in/jeremyw00d/")
+            }
+          >
             <button>
-              <img
-                src={linkedInLogo}
-                onClick={() =>
-                  openInNewTab("https://www.linkedin.com/in/jeremyw00d/")
-                }
-                alt="Check out my LinkedIn."
-              />
+              <img src={linkedInLogo} alt="Check out my LinkedIn." />
             </button>
             <p>LinkedIn</p>
           </div>
-          <div className="contact-link">
+          <div
+            className="contact-link"
+            onClick={() => openInNewTab("https://github.com/J5Wood")}
+          >
             <button>
-              <img
-                src={gitHubLogo}
-                onClick={() => openInNewTab("https://github.com/J5Wood")}
-                alt="Check out my GitHub."
-              />
+              <img src={gitHubLogo} alt="Check out my GitHub." />
             </button>
             <p>GitHub</p>
           </div>
         </div>
         <div className="contact-group">
-          <div className="contact-link">
+          <div
+            className="contact-link"
+            onClick={() => openInNewTab("https://jwood206.medium.com/")}
+          >
             <button>
-              <img
-                src={mediumLogo}
-                onClick={() => openInNewTab("https://jwood206.medium.com/")}
-                alt="Check out my blog on Medium"
-              />
+              <img src={mediumLogo} alt="Check out my blog on Medium" />
             </button>
             <p>Medium</p>
           </div>
-          <div className="contact-link">
+          <div
+            className="contact-link"
+            onClick={() =>
+              (window.location.href = "mailto:js.wood206@gmail.com")
+            }
+          >
             <button>
-              <img
-                src={mailIcon}
-                onClick={() =>
-                  (window.location.href = "mailto:js.wood206@gmail.com")
-                }
-                alt="Send me an email."
-              />
+              <img src={mailIcon} alt="Send me an email." />
             </button>
             <p id="email">Js.Wood206@gmail.com</p>
           </div>

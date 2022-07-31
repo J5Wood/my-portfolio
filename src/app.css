@@ -375,15 +375,20 @@ body {
   padding: 20px 0;
 }
 
+.contact-link {
+  transition: transform 0.25s;
+  cursor: pointer;
+}
+
+.contact-link:hover {
+  transform: translate(-3px, -3px);
+}
+
 .contact-link button {
   background: none;
   border: none;
   width: 200px;
   overflow: visible;
-}
-
-.contact-link button:hover {
-  cursor: pointer;
 }
 
 #email {
