@@ -11,7 +11,7 @@ const Project = (props) => {
     const randomColorValue = () => Math.floor(Math.random() * 256);
     root.style.setProperty(
       "--random-color",
-      `rgba(${randomColorValue()},${randomColorValue()}, ${randomColorValue()}, 0.7)`
+      `rgba(${randomColorValue()},${randomColorValue()}, ${randomColorValue()}, 1)`
     );
   };
 
