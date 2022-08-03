@@ -40,7 +40,7 @@ body {
 #name-header {
   flex-grow: 1;
   white-space: nowrap;
-  font-family: STFangsong, rockwell;
+  font-family: "EB Garamond", STFangsong, serif, sans-serif;
   font-size: 270%;
   padding-right: 20px;
 }
