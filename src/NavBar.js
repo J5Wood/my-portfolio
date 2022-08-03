@@ -20,51 +20,55 @@ const NavBar = () => {
       <h1 id="name-header">Jeremy Wood</h1>
       <span id="nav-spacer"></span>
       <span className="nav-links">
-        <button
-          className="nav-button"
-          onMouseOver={handleMouseOver}
-          onMouseDown={handlePressedButton}
-          onMouseUp={unPressButton}
-          onMouseLeave={unPressButton}
-          data-linked-component="about-me"
-          onClick={(e) => navigateToSection(e, -50)}
-        >
-          About Me
-        </button>
-        <button
-          className="nav-button"
-          onMouseOver={handleMouseOver}
-          onMouseDown={handlePressedButton}
-          onMouseUp={unPressButton}
-          onMouseLeave={unPressButton}
-          data-linked-component="projects"
-          onClick={(e) => navigateToSection(e, -0)}
-        >
-          Projects
-        </button>
-        <button
-          className="nav-button"
-          onMouseOver={handleMouseOver}
-          onMouseDown={handlePressedButton}
-          onMouseUp={unPressButton}
-          onMouseLeave={unPressButton}
-          data-linked-component="contact"
-          onClick={(e) => navigateToSection(e)}
-        >
-          Contact Me
-        </button>
-        <a
-          className="nav-button"
-          href={resume}
-          target="_blank"
-          onMouseOver={handleMouseOver}
-          onMouseDown={handlePressedButton}
-          onMouseUp={unPressButton}
-          onMouseLeave={unPressButton}
-          download
-        >
-          Resume
-        </a>
+        <span className="nav-group">
+          <button
+            className="nav-button"
+            onMouseOver={handleMouseOver}
+            onMouseDown={handlePressedButton}
+            onMouseUp={unPressButton}
+            onMouseLeave={unPressButton}
+            data-linked-component="about-me"
+            onClick={(e) => navigateToSection(e, -50)}
+          >
+            About Me
+          </button>
+          <button
+            className="nav-button"
+            onMouseOver={handleMouseOver}
+            onMouseDown={handlePressedButton}
+            onMouseUp={unPressButton}
+            onMouseLeave={unPressButton}
+            data-linked-component="projects"
+            onClick={(e) => navigateToSection(e, -0)}
+          >
+            Projects
+          </button>
+        </span>
+        <span className="nav-group">
+          <button
+            className="nav-button"
+            onMouseOver={handleMouseOver}
+            onMouseDown={handlePressedButton}
+            onMouseUp={unPressButton}
+            onMouseLeave={unPressButton}
+            data-linked-component="contact"
+            onClick={(e) => navigateToSection(e)}
+          >
+            Contact Me
+          </button>
+          <a
+            className="nav-button"
+            href={resume}
+            target="_blank"
+            onMouseOver={handleMouseOver}
+            onMouseDown={handlePressedButton}
+            onMouseUp={unPressButton}
+            onMouseLeave={unPressButton}
+            download
+          >
+            Resume
+          </a>
+        </span>
       </span>
     </nav>
   );

@@ -14,7 +14,7 @@ body {
   width: 100%;
   margin: 0;
   line-height: 1.5rem;
-  font-size: larger;
+  font-size: 1.25em;
   text-align: center;
   overflow-x: hidden;
   display: flex;
@@ -41,7 +41,7 @@ body {
   flex-grow: 1;
   white-space: nowrap;
   font-family: "EB Garamond", STFangsong, serif, sans-serif;
-  font-size: 270%;
+  font-size: 2.75em;
   padding-right: 20px;
 }
 
@@ -56,9 +56,15 @@ body {
   gap: 12px;
 }
 
+.nav-group {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 12px;
+}
+
 .nav-button {
   border: 2px ridge grey;
-  border-radius: 3px;
+  border-radius: 10px;
   padding: 10px 10px;
   font-size: small;
   display: flex;
@@ -72,7 +78,6 @@ body {
 }
 
 .highlight {
-  border-radius: 3px;
   text-shadow: 1px 1px 2px rgb(177, 177, 177);
   transform: translateX(-3px) translateY(-2px);
   border: 0.5px ridge black;
@@ -83,7 +88,6 @@ body {
 }
 
 .held-button {
-  border-radius: 3px;
   background: linear-gradient(
     36deg,
     rgba(0, 255, 204, 0.3) 29%,
@@ -132,8 +136,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  padding: 10px 3em;
-  text-indent: 1.5em;
+  padding: 10px 0;
 }
 
 #about-me h2 {
@@ -144,11 +147,18 @@ body {
     36deg,
     rgba(255, 251, 0, 1) -100%,
     rgba(0, 255, 204, 0.8) 60%,
-    rgba(255, 251, 0, 1) 85% /* rgba(39, 255, 0, 0.7) 150% */
+    rgba(255, 251, 0, 1) 85%
   );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  max-width: 100%;
+  text-align: center;
+}
+
+#about-me p {
+  text-indent: 1.5em;
+  padding: 10px 3em;
 }
 
 /*** Projects */
@@ -237,7 +247,7 @@ body {
 }
 
 .project {
-  padding: 10px 1em;
+  padding: 10px 0;
   font-size: medium;
   width: 100%;
   height: 100%;
@@ -260,8 +270,20 @@ body {
   cursor: default;
 }
 
+.project p {
+  padding: 0 2em;
+}
+
+.project img {
+  padding: 0 1em;
+}
+
 .project ul {
-  padding: 1em;
+  padding: 1em 1.5em;
+}
+
+.project ul li {
+  padding: 0.5em 0;
 }
 
 .project-image {
@@ -283,6 +305,7 @@ body {
   color: white;
   font-weight: 700;
   box-shadow: 2px 2px 3px grey;
+  max-width: 100%;
 }
 
 .large-project-display {
@@ -435,4 +458,42 @@ body {
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgb(153, 153, 153);
+}
+
+/*** media queries */
+
+@media (max-width: 500px) {
+  #name-header {
+    font-size: 2em;
+  }
+
+  .project-container {
+    gap: 1em;
+  }
+
+  .project-background {
+    height: max(64%, 150px);
+  }
+}
+
+@media (max-width: 350px) {
+  #title {
+    max-height: 100vw;
+  }
+
+  #about-me p {
+    padding: 10px 1em;
+  }
+
+  #contact {
+    padding: 50px 0;
+  }
+
+  .nav-links {
+    flex-flow: row wrap;
+  }
+
+  .project p {
+    padding: 0 0.2em;
+  }
 }
