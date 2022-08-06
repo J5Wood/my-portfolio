@@ -7,7 +7,8 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "webpack serve --open --config webpack.dev.js",
+    "dev": "webpack serve --open --config webpack.dev.js",
+    "start": "webpack --config webpack.prod.js",
     "build": "webpack --config webpack.prod.js"
   },
   "repository": {
