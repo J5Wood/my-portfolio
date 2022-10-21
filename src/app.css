@@ -423,12 +423,12 @@ body {
 }
 
 .contact-group {
-  overflow-y: hidden;
   display: flex;
   flex-flow: row wrap;
   flex-grow: 1;
   justify-content: space-around;
   padding: 20px 0;
+  overflow-y: visible;
 }
 
 .contact-link {
@@ -440,12 +440,41 @@ body {
   transform: translate(-3px, -3px);
 }
 
+.contact-link:hover .raccoon {
+  top: -120px;
+}
+
+.raccoon {
+  width: 90px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -2;
+  transition: top 1s;
+}
+
 .contact-link button {
   background: none;
   border: none;
   width: 200px;
   overflow: visible;
   cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.contact-link button::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(0, 0, 0); */
+  content: "";
+  z-index: -1;
 }
 
 #email {
