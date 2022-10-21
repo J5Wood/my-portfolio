@@ -4,6 +4,8 @@ import gitHubLogo from "./assets/github-logo.png";
 import mediumLogo from "./assets/medium-logo.png";
 import mailIcon from "./assets/mail-logo.png";
 
+//  ***** Have something pop out from  behind the links when you hover
+
 const Contact = () => {
   const openInNewTab = (url) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");

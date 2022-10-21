@@ -6,17 +6,18 @@ import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { moveShadow } from "./utils/moveShadow";
 
 const App = () => {
   return (
-    <>
+    <div onMouseMove={(e) => moveShadow(e)}>
       <NavBar />
       <Title />
       <AboutMe />
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 };
 
