@@ -448,34 +448,35 @@ body {
   width: 90px;
   height: 120px;
   position: absolute;
-  /* top: -240px; */
-  /* border-bottom-right-radius: 50px; */
+  top: -240px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
   overflow: hidden;
-}
-
-.raccoon-li {
-  top: -240px;
-}
-
-.raccoon-gh {
-  top: -240px;
-  height: 160px;
-  transform-origin: 50% 200px;
-  rotate: 115deg;
   z-index: -1;
 }
 
+.raccoon-gh {
+  height: 160px;
+  transform-origin: 50% 200px;
+  rotate: 115deg;
+  /* z-index: -1; */
+}
+
 .raccoon-med {
-  top: -240px;
   left: -60px;
   height: 160px;
   transform-origin: 50% 200px;
   rotate: -50deg;
-  z-index: -1;
+  /* z-index: -1; */
+}
+
+.raccoon-li {
+  top: -320px;
+  transform-origin: 50% 200px;
+  rotate: 180deg;
+  /* z-index: -1; */
 }
 
 .raccoon {

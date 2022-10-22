@@ -78,6 +78,13 @@ const Contact = () => {
           >
             <button>
               <img src={mailIcon} alt="Send me an email." />
+              <div className="raccoon-container">
+                <img
+                  className="raccoon"
+                  src={raccoon}
+                  alt="The face of a raccoon"
+                />
+              </div>
             </button>
             <p id="email">Js.Wood206@gmail.com</p>
           </div>
