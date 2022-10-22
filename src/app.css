@@ -469,6 +469,15 @@ body {
   z-index: -1;
 }
 
+.raccoon-med {
+  top: -240px;
+  left: -60px;
+  height: 160px;
+  transform-origin: 50% 200px;
+  rotate: -50deg;
+  z-index: -1;
+}
+
 .raccoon {
   width: 90px;
   position: absolute;

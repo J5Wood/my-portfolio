@@ -60,6 +60,13 @@ const Contact = () => {
           >
             <button>
               <img src={mediumLogo} alt="Check out my blog on Medium" />
+              <div className="raccoon-container raccoon-med">
+                <img
+                  className="raccoon"
+                  src={raccoon}
+                  alt="The face of a raccoon"
+                />
+              </div>
             </button>
             <p>Medium</p>
           </div>
