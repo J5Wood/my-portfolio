@@ -5,8 +5,7 @@ import mediumLogo from "./assets/medium-logo.png";
 import mailIcon from "./assets/mail-logo.png";
 import raccoon from "./assets/raccoon.png";
 
-//  ***** Have something pop out from  behind the links when you hover
-//  ***** Finish hiding raccoon behind link
+//  ***** add more raccoons!
 
 const Contact = () => {
   const openInNewTab = (url) => {
@@ -27,11 +26,13 @@ const Contact = () => {
           >
             <button>
               <img src={linkedInLogo} alt="Check out my LinkedIn." />
-              <img
-                className="raccoon"
-                src={raccoon}
-                alt="The face of a raccoon"
-              />
+              <div className="raccoon-container">
+                <img
+                  className="raccoon"
+                  src={raccoon}
+                  alt="The face of a raccoon"
+                />
+              </div>
             </button>
             <p>LinkedIn</p>
           </div>

@@ -441,19 +441,31 @@ body {
 }
 
 .contact-link:hover .raccoon {
-  top: -120px;
+  top: 127px;
+}
+
+.raccoon-container {
+  width: 90px;
+  height: 120px;
+  position: absolute;
+  top: -240px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
 }
 
 .raccoon {
   width: 90px;
   position: absolute;
-  top: 0;
+  top: 240px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
   z-index: -2;
-  transition: top 1s;
+  transition: top 0.6s;
 }
 
 .contact-link button {
@@ -472,7 +484,6 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  /* background-color: rgb(0, 0, 0); */
   content: "";
   z-index: -1;
 }
