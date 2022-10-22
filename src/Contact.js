@@ -26,7 +26,7 @@ const Contact = () => {
           >
             <button>
               <img src={linkedInLogo} alt="Check out my LinkedIn." />
-              <div className="raccoon-container">
+              <div className="raccoon-container raccoon-li">
                 <img
                   className="raccoon"
                   src={raccoon}
@@ -42,6 +42,13 @@ const Contact = () => {
           >
             <button>
               <img src={gitHubLogo} alt="Check out my GitHub." />
+              <div className="raccoon-container raccoon-gh">
+                <img
+                  className="raccoon"
+                  src={raccoon}
+                  alt="The face of a raccoon"
+                />
+              </div>
             </button>
             <p>GitHub</p>
           </div>
