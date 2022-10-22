@@ -461,7 +461,6 @@ body {
   height: 160px;
   transform-origin: 50% 200px;
   rotate: 115deg;
-  /* z-index: -1; */
 }
 
 .raccoon-med {
@@ -469,14 +468,12 @@ body {
   height: 160px;
   transform-origin: 50% 200px;
   rotate: -50deg;
-  /* z-index: -1; */
 }
 
 .raccoon-li {
   top: -320px;
   transform-origin: 50% 200px;
   rotate: 180deg;
-  /* z-index: -1; */
 }
 
 .raccoon {
