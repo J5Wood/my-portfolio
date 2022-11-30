@@ -64,7 +64,7 @@ const NavBar = () => {
             onMouseDown={handlePressedButton}
             onMouseUp={unPressButton}
             onMouseLeave={unPressButton}
-            download
+            download="jeremy/wood/resume"
           >
             Resume
           </a>
