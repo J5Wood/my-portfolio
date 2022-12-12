@@ -5,7 +5,7 @@ import mediumLogo from "./assets/medium-logo.png";
 import mailIcon from "./assets/mail-logo.png";
 import raccoon from "./assets/raccoon.png";
 
-//  ***** add more raccoons!
+//  ***** Make it easy to copy email address. Maybe popup with copy icon and send mail icon. Or disable link from actual email address below mail icon.
 
 const Contact = () => {
   const openInNewTab = (url) => {
